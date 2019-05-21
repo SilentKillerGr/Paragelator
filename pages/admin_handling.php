@@ -9,7 +9,7 @@
 	//ENCRYPT PASSWORD
 	//$password = md5($password);
 	
-	$query = "SELECT password FROM admins WHERE username = '$username'";
+	$query = "SELECT password, role_id, user_id FROM users WHERE username = '$username'";
 	$result = mysqli_query($conn, $query);
 	$row = mysqli_fetch_assoc($result);
 	
@@ -19,7 +19,9 @@
 	if (password_verify($password, $dbPassword))
 	{
 		$_SESSION['loggedin'] = $username;
-		header("Location: admin.php");
+		$_SESSION['role_id'] = $row['role_id'];
+		$_SESSION['user_id'] = $row['user_id'];
+		header("Location: ../index.php");
 		die();
 	}
 	else
