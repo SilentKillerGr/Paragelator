@@ -10,30 +10,7 @@
 		logout();
 	}
 ?>
-<!-- Modals for actions -->
-	<!-- Insert Product -->
-	<div id="modal-wrapper" class="modal">
-		<form role="form" method="post" class="modal-content animate" action="pages/server.php">
 
-        
-
-    <div class="imgcontainer">
-
-      <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
-
-      <h1 style="text-align:center">Εγγραφή Νέου Χρήστη</h1>
-
-    </div>
-	  	<input type="text" placeholder="Όνομα Χρήστη" name="uname" required>
-		<input type="password" placeholder="Κωδικός Πρόσβασης" name="psw" required>
-		<input type="text" placeholder="Όνομα" name="name" required>
-		<input type="text" placeholder="Επώνυμο" name="surn" required>
-		<input type="radio" id="radios" name="utype" value="1" checked>Σερβος
-      	<input type="radio" id="radios" name="utype" value="2">Αυγος
-		<input type="radio" id="radios" name="utype" value="3">Πεκερ 
-		<button type="submit">Εγγραφή</button>
-  </form>
-	</div>
 	<script>
 	var modal = document.getElementById('modal-wrapper');
 	var modals = document.getElementById('modal-wrapper-s');
