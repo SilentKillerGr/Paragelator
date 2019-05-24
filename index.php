@@ -11,9 +11,7 @@
 						<?php
 							if(isset($_GET['disp_id'])){
 								include 'pages/'.$_GET['disp_id'].'.php';
-								if(isset($_GET['ord_type'])){
-									echo "Eimai setted gia tin poutsa\ paidi sse timi: " .$_GET['ord_type'];
-								}
+								
 							}else{
 								
 								echo "<p>Τί θα κάνουμε σήμερα;</p><br>";

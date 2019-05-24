@@ -31,6 +31,19 @@
 		<title>Paragelator Admin</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<?php
+			if(isset($_GET['disp_id'])){
+				if($_SESSION['role_id'] == 2 && $_GET['disp_id'] == 'vorders'){
+		?>
+		<meta http-equiv="refresh" content="3; URL=index.php?disp_id=vorders&ord_type=pending">
+		<?php
+				}else if($_SESSION['role_id'] == 1 && $_GET['disp_id'] == 'vorders' && $_GET['ord_type'] == 'open'){
+		?>
+		<meta http-equiv="refresh" content="3; URL=index.php?disp_id=vorders&ord_type=open">
+		<?php
+				}
+			}
+		?>
 		<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 		<link href="layout/styles/login.css" rel="stylesheet">
 		<script> var __adobewebfontsappname__="dreamweaver" </script>

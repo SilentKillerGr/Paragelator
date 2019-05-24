@@ -3,7 +3,7 @@
 	if(isset($_POST['submit'])){
 		include 'dbconnect.php';
 		$uid = $_GET['user'];
-		if(isset($_POST['uname'])){
+		if($_POST['uname'] != ""){
 			$uname = $_POST['uname'];
 			$sql = "UPDATE `users` SET username = '$uname' WHERE user_id = '$uid'";
 			//EXECUTE QUERY
@@ -15,7 +15,7 @@
 				echo "<script type='text/javascript'>alert('$message');</script>";
 			}
 		}
-		if(isset($_POST['name'])){
+		if(($_POST['name']) != ""){
 			$name = $_POST['name'];
 			$sql = "UPDATE `users` SET name = '$name' WHERE user_id = '$uid'";
 			//EXECUTE QUERY
@@ -27,7 +27,7 @@
 				echo "<script type='text/javascript'>alert('$message');</script>";
 			}
 		}
-		if(isset($_POST['surn'])){
+		if(($_POST['surn']) != ""){
 			$surname = $_POST['surn'];
 			$sql = "UPDATE `users` SET surname = '$surname' WHERE user_id = '$uid'";
 			//EXECUTE QUERY
