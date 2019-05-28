@@ -2,6 +2,7 @@
 	include 'dbconnect.php';
 	$usrname = $_SESSION['loggedin'];
 	function logout(){
+		include 'dbconnect.php';
 		session_destroy();
 		header("Location: index.php");
 		exit();
@@ -28,7 +29,7 @@
 	</script>
 <html>
 	<head>
-		<title>Paragelator Admin</title>
+		<title>Paragelator Administrator</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<?php
@@ -69,7 +70,7 @@
 		<div class="row100 bgded">
 			<header id="header" class="clear">
 				<div id="logo" class="fl_left">
-				<h1><a href="index.php">Paragelator Admin</a></h1>
+				<h1><a href="index.php">Paragelator Administrator</a></h1>
 			  </div>
 				<nav id="mainav" class="fl_right">
 					<li class="active"><a href="index.php">Αρχικη</a></li>

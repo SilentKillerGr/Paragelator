@@ -21,6 +21,7 @@
 		$_SESSION['loggedin'] = $username;
 		$_SESSION['role_id'] = $row['role_id'];
 		$_SESSION['user_id'] = $row['user_id'];
+		$_SESSION['balance'] = $row['balance'];
 		header("Location: ../index.php");
 		die();
 	}
